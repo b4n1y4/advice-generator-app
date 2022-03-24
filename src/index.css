@@ -1,13 +1,83 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+  height: 100vh;
+  font-size: 28px;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background-color: hsl(218, 23%, 16%);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: hsl(217, 19%, 24%);
+  width: 50%;
+  min-width: 350px;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.divider {
+  width: 100%;
+}
+
+.card-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.card-contents > * {
+  margin-bottom: 1rem;
+}
+
+.advice-id {
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  color: hsl(150, 100%, 66%);
+}
+
+.loading,
+.advice-text {
+  text-align: center;
+  color: hsl(193, 38%, 86%);
+  font-size: 0.875em;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -40px;
+  cursor: pointer;
+  transition: box-shadow 0.2s linear;
+}
+
+button:hover,
+button:focus {
+  box-shadow: 0px 0px 18px hsl(150, 100%, 66%);
 }
